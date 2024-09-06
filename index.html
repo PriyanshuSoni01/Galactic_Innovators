@@ -22,23 +22,32 @@
         </a>
         <div class="flex w-2/5 text-xl justify-evenly gap-4 items-center">
             <a href="#about"
-                class=" mb-2 hover:font-semibold hover:text-xl hover:border-b-2 hover:border-white transition-all duration-150 ease-in">About
+                class=" mb-2 hover:font-bold hover:border-b-2 border-white tracking-wide  hover:scale-105 transition-all duration-150 ease-in">About
                 Us</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#references">References</a>
-            <a href="#main"
-                class=" mb-2 hover:border-b-2 hover:border-white transition-all duration-150 ease-in">Main</a>
+                <a href="#main"
+            class=" mb-2 hover:font-bold hover:border-b-2 border-white tracking-wide  hover:scale-105 transition-all duration-150 ease-in">OHRC</a>
+            <a href="#gallery" class=" mb-2 hover:font-bold hover:border-b-2 border-white tracking-wide  hover:scale-105 transition-all duration-150 ease-in">Gallery</a>
+            <a href="#references" class=" mb-2 hover:font-bold hover:border-b-2 border-white tracking-wide  hover:scale-105 transition-all duration-150 ease-in">References</a>
+            
         </div>
     </nav>
-
-    <!-- HOME SECTION -->
-    <section id="home" class="w-11/12  mx-auto h-[70vh] relative mt-24 p-7">
+     <!-- HOME SECTION -->
+     <!-- <section id="home" class="w-11/12  mx-auto h-[70vh] relative mt-24 p-7">
         <div class=" absolute right-5 flex flex-col">
-            <span class="text-white text-[6.5rem] leading-normal font-extrabold">PIXEL</span>
+            <span class="text-white text-[6.5rem] leading-normal font-extrabold ">PIXEL</span>
             <span class="text-white text-[6.25rem] leading-normal font-extrabold">PERFECTION,</span>
             <span class="text-white text-[6rem] leading-normal font-extrabold">PERFECTED.</span>
         </div>
-    </section>
+    </section> -->
+
+  <!-- HOME SECTION -->
+<section id="home" class="w-11/12 mx-auto h-[70vh] relative mt-24 p-7">
+    <div class="absolute right-5 flex flex-col space-y-2">
+        <span class="text-white text-[6.5rem] leading-normal font-extrabold ">PIXEL</span>
+        <span class="text-white text-[6.25rem] leading-normal font-extrabold delay-100">PERFECTION,</span>
+        <span class="text-white text-[6rem] leading-normal font-extrabold delay-200">PERFECTED.</span>
+    </div>
+</section>
 
     <!-- ABOUT US SECTION -->
     <section id="about" class="w-11/12 mx-auto h-[60vh] mt-24 relative text-white">
@@ -56,93 +65,94 @@
 
     <!-- MAIN SECTION -->
 
-    <section id="main" class="w-11/12 border-2 border-white mx-auto h-[60vh] mt-24 flex justify-evenly gap-x-4">
+    <section id="main" class="w-11/12  mx-auto h-[60vh] mt-14 mb-64 flex gap-y-5 flex-col relative">
         <!-- Content for Main Section -->
-        <p class="text-2xl text-center">MAIN </p>
-
-        <!-- LEFT SECTION -->
-
-        <div class="flex flex-col w-full max-w-md p-6 upload-area rounded-lg shadow-lg">
-            <!-- Upload Area -->
-            <div id="upload-area" class="flex flex-col items-center justify-center p-6 cursor-pointer"
-                onclick="document.getElementById('file-input').click()">
-                <input type="file" accept="image/png, image/jpg, image/jpeg" id="file-input" class="hidden"
-                    onchange="handleFileChange(event)">
-                <div id="preview-container" class="flex flex-col items-center text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V7l-6-4H4z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <p class="text-gray-300">Browse Files to upload</p>
-                </div>
-            </div>
-
-            <!-- Disclaimer -->
-            <div class="mt-4 flex items-center p-4 disclaimer text-white">
-                <img src="./assets/alert.svg" alt="alert icon" class="w-6 h-6 mr-2">
-                <p class="font-bold text-sm">NOTE:</p>
-                <p class="text-sm ml-1">File should not exceed 2MB</p>
-            </div>
-
-            <!-- Buttons -->
-            <div class="mt-4 flex justify-between">
-                <button onclick="handleUpload()"
-                    class="w-full py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600">Fetch Information</button>
-                <button onclick="handleRemove()" class="ml-4 text-red-500 hover:text-red-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M5.5 4.5a1.5 1.5 0 011.5 1.5v9.5a1.5 1.5 0 01-3 0V6A1.5 1.5 0 015.5 4.5zM14 6v9.5a1.5 1.5 0 11-3 0V6a1.5 1.5 0 113 0zM7.5 4a.5.5 0 01.5-.5h4a.5.5 0 01.5.5v1.5H7.5V4zM2 6.5A1.5 1.5 0 013.5 5h13a1.5 1.5 0 011.5 1.5v1.5H2V6.5zM3.5 9h13V15H3.5V9z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- RIGHT SECTION -->
-
-        <div id="output-section"
-            class="flex flex-col w-full max-w-md mt-8 p-6 bg-[rgba(0,0,0,0.7)] text-white rounded-lg shadow-lg border-2 border-white">
-            <h2 class="text-xl font-bold mb-4">Upload Results</h2>
-            <div id="output-content" class="flex flex-col items-center">
-                <p id="file-name" class="text-gray-300">No file uploaded</p>
-                <img id="output-image" class="w-full h-auto mt-4" src="" alt="" style="display: none;">
-                <div id="file-info" class="mt-4 text-gray-300">
-                    <!-- File info will be displayed here -->
-                </div>
-            </div>
-        </div>
-
+         <div class="flex flex-col h-[50vh]  right-5 top-6 bottom-6 w-[40%] absolute bg-opacity-40">
+            <span class="text-4xl font-semibold text-white leading-normal">Orbiter High Resolution Camera (OHRC)</span>
+            <p class="text-lg tracking-normal text-white leading-normal"> provides high-resolution images of the landing site which ensure the Lander’s safe touchdown by detecting any craters or boulders, prior to separation. The images it captures, taken from two different look angles, serve dual purposes. First, these images are used to generate DEMs (Digital Elevation Models) of the landing site. Second, they are used for scientific research after its initial role in the landing phase. OHRC’s images can capture the same area on the lunar surface from two different orbits. The coverage area in this case is of 12 km x 3 km with ground resolution of 0.32 m. OHRC is an optical camera system based on Time Delay Integration (TDI) imaging sensors with 12000 detectors. It has 4 TDI settings and 7 different integration times.</p>
+         </div>
+       
     </section>
 
     <!-- GALLERY SECTION -->
-    <section id="gallery" class="w-11/12 mx-auto h-[60vh] mt-24">
+    <section id="gallery" class="w-11/12 mx-auto h-[70vh] bg-white bg-opacity-90 rounded-lg">
         <!-- Content for Gallery Section -->
-        <p class="text-2xl text-center text-white">GALLERY </p>
+        <h1 class=" text-black text-6xl text-right pr-[7.2rem] font-bold mb-5 p-2">GALLERY </h1>
        
-            <div class="swiper mySwiper ">
+            <div class="swiper mySwiper rounded-lg ">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./assets/gallery-1.jpg"></div>
-                    <div class="swiper-slide"><img src="./assets/gallery-2.jpg"></div>
-                    <div class="swiper-slide"><img src="./assets/gallery-3.jpg"></div>
-                    <div class="swiper-slide"><img src="./assets/gallery-4.jpg"></div>
-                    <div class="swiper-slide"><img src="./assets/gallery-5.jpg"></div>
-                    <div class="swiper-slide"><img src="./assets/gallery-6.jpg"></div>
-                    <div class="swiper-slide"><img src="./assets/gallery-7.jpg"></div>
-                    <div class="swiper-slide"><img src="./assets/gallery-8.jpg"></div>
-                    <div class="swiper-slide"><img src="./assets/gallery-9.jpg"></div>
+                    <div class="swiper-slide"><img src="./assets/slide-1.png"></div>
+                    <div class="swiper-slide"><img src="./assets/slide-3.png"></div>
+                    <div class="swiper-slide"><img src="./assets/slide-4.png"></div>
+                    <div class="swiper-slide"><img src="./assets/slide-5.png"></div>
+                    <div class="swiper-slide"><img src="./assets/slide-6.png"></div>
+                    <div class="swiper-slide"><img src="./assets/slide-7.png"></div>
+                    <div class="swiper-slide"><img src="./assets/slide-8.png"></div>
+                    <div class="swiper-slide"><img src="./assets/slide-9.png"></div>
+                    <div class="swiper-slide"><img src="./assets/slide-2.png"></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
+        
        
     </section>
 
     <!-- REFERENCES SECTION -->
-    <section id="references" class="w-11/12 border-2 border-white mx-auto h-[60vh] mt-24">
+<!--<section id="references" class="w-11/12 mx-auto h-[60vh] mt-28 flex p-5 justify-around">-->
         <!-- Content for References Section -->
-        <p class="text-2xl text-center text-white">REFERENCES </p>
-    </section>
+                <!-- Left section for References -->
+       <!-- <div class=" flex flex-col bg-white w-[40%] bg-opacity-70  rounded-xl p-5 gap-y-6 shadow-2xl shadow-slate-50 hover:scale-105 hover:bg-opacity-100 transition-all duration-300">
+                <p class="text-black text-3xl font-extrabold text-center mb-10 ">REFERENCES</p>
+                <span class="text-2xl font-medium hover:underline transition-all duration-200"><a href="https://arxiv.org/abs/1809.00219" >1. ESRGAN</a>
+                </span>
+                <span class="text-2xl font-medium hover:underline"><a href=" https://link.springer.com/article/10.1007/s11063-018-09968-2">2. Low-Light Enhancement</a>
+                </span>
+                <span class="text-2xl font-medium hover:underline"><a href="https://arxiv.org/abs/2111.15557">3. Low-Light Generative Network</a>
+                </span>
+            
+        </div>-->
 
+        <!-- Right Section for Contact Us -->
 
+        <!--<div class=" flex flex-col bg-white w-[40%] bg-opacity-80  rounded-xl p-4 hover:scale-105 shadow-2xl shadow-slate-50 gap-y-2 hover:bg-opacity-100 transition-all duration-300">
+            <p class="text-black text-4xl font-extrabold text-center mb-5">GET TO KNOW US</p>
+            <span class="text-2xl ">1. Ayush Singh</span>
+            <span class="text-2xl ">2. Harshit Gupta</span>
+            <span class="text-2xl ">3. Kratika Daswani</span>
+            <span class="text-2xl ">4. Naitik Saxena</span>
+            <span class="text-2xl ">5. Priyanshu Soni</span>
+            <span class="text-2xl ">6. Tanish Jain</span>
+        
+    </div>
+    </section>-->
+
+<!-- REFERENCES SECTION -->
+<section id="references" class="w-11/12 mx-auto h-[60vh] mt-28 flex p-5 justify-around">
+    <!-- Left section for References -->
+    <div class="flex flex-col bg-white w-[40%] bg-opacity-70 rounded-xl p-5 gap-y-6 shadow-2xl shadow-slate-50 hover:scale-105 hover:bg-opacity-100 transition-all duration-300 animate-fade-scale-in">
+        <p class="text-black text-3xl font-extrabold text-center mb-10 underline">REFERENCES</p>
+        <span class="text-2xl font-medium hover:underline transition-all duration-200">
+            <a href="https://arxiv.org/abs/1809.00219">1. ESRGAN</a>
+        </span>
+        <span class="text-2xl font-medium hover:underline">
+            <a href=" https://link.springer.com/article/10.1007/s11063-018-09968-2">2. Low-Light Enhancement</a>
+        </span>
+        <span class="text-2xl font-medium hover:underline">
+            <a href="https://arxiv.org/abs/2111.15557">3. Low-Light Generative Network</a>
+        </span>
+    </div>
+
+    <!-- Right Section for Contact Us -->
+    <div class="flex flex-col bg-white w-[40%] bg-opacity-80 rounded-xl p-4 hover:scale-105 shadow-2xl shadow-slate-50 gap-y-2 hover:bg-opacity-100 transition-all duration-300  delay-200">
+        <p class="text-black text-4xl font-extrabold text-center mb-5 underline">GET TO KNOW US</p>
+        <span class="text-2xl">1. Ayush Singh (Team Leader)</span>
+        <span class="text-2xl">2. Harshit Gupta</span>
+        <span class="text-2xl">3. Kratika Daswani</span>
+        <span class="text-2xl">4. Naitik Saxena</span>
+        <span class="text-2xl">5. Priyanshu Soni</span>
+        <span class="text-2xl">6. Tanish Jain</span>
+    </div>
+</section>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
